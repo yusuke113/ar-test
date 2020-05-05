@@ -6,7 +6,7 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 <body style="margin: 0px; overflow: hidden;">
 <!-- こっからA-Frame -->
-<a-scene>
+<a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
     <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
     <a-assets>
       <video id="neko" autoplay loop="true" src="./src/FOODIE_1588174583.MP4"></video>
