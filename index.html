@@ -9,12 +9,12 @@
 <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
     <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
     <a-assets>
-      <video id="neko" autoplay loop="true" src="./src/FOODIE_1588174583.mp4"></video>
+      <image id="neko" autoplay loop="true" src="./src/IMG_0077.jpg"></image>
     </a-assets>
     <!-- こっからARの世界。マーカー上になにを展開するかを書く -->
     <a-marker preset="hiro">
       <!-- Using the asset management system. -->
-      <a-video src="#neko" width="16" height="9" position="0 0 -20"></a-video>
+      <a-image src="#neko" rotation="-90 0 0"></a-image>
       <a-text value="誕生日おめでとう！！" position="0 1.5 0" rotation="-90 0 0" align="center"></a-text>
     </a-marker>
     <!-- arなのでこんな感じでカメラが必要らしい。 -->
