@@ -6,15 +6,16 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 <body style="margin: 0px; overflow: hidden;">
 <!-- こっからA-Frame -->
-<a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
+<a-scene>
     <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
     <a-assets>
-      <img id="movie" src="src/IMG_1188.jpg">
+      <video id="neko" autoplay loop="true" src="./src/FOODIE_1588174583.MP4"></video>
     </a-assets>
     <!-- こっからARの世界。マーカー上になにを展開するかを書く -->
     <a-marker preset="hiro">
-        <a-image id="kiki" src="#movie" rotation="-90 0 0" width="2" height="2"></a-image>
-        <a-text value="Hello kiki！!！" position="0 1.3 0" rotation="-90 0 0" align="center"></a-text>
+      <!-- Using the asset management system. -->
+      <a-video src="#neko" width="16" height="9" position="0 0 -20"></a-video>
+      <a-text value="誕生日おめでとう！！" position="0 1.5 0" rotation="-90 0 0" align="center"></a-text>
     </a-marker>
     <!-- arなのでこんな感じでカメラが必要らしい。 -->
     <a-entity camera></a-entity>
